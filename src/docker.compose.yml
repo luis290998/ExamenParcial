@@ -1,0 +1,19 @@
+version: "3.8"
+
+services:
+db-mysql:
+image: mysql:8.0
+container_name:  db-mysql-1 #nombre contenedor
+restart: always
+enviroment:
+    MYSQL_ROOT_PASSWORD: 1234
+    MYSQL_DATABASE: dbtaller
+ports:
+    - "3308:3306" # se cambio a puerto 3308
+volumenes:
+    db_data:/var/lib/mysql
+
+volumenes:
+    db_data:
+
+
